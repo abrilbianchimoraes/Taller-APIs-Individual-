@@ -7,7 +7,7 @@ function fetchDog() {
         .then(response => response.json())
         .then(data => {
             const dogImage = document.getElementById('dogImage');
-            dogImage.src = data[0].url; // Asigna la URL de la imagen al elemento <img>
+            dogImage.src = data[0].url; 
         })
         .catch(error => console.error('Error:', error));
 }
