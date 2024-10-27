@@ -1,17 +1,13 @@
-const apiKey = 'TU_API_KEY_AQUI'; // Reemplaza con tu clave de API
-const city = 'Buenos Aires'; // Ciudad a consultar
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+const url = 'https://api.thedogapi.com/v1/images/search';
 
-fetch(url)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Error en la conexión');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(`La temperatura en ${city} es ${data.main.temp} °C`);
-  })
-  .catch(error => {
-    console.error('Hubo un problema con la petición Fetch:', error);
-  });
+document.getElementById('fetchDogBtn').addEventListener('click', fetchDog);
+
+function fetchDog() {
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const dogImage = document.getElementById('dogImage');
+            dogImage.src = data[0].url; // Asigna la URL de la imagen al elemento <img>
+        })
+        .catch(error => console.error('Error:', error));
+}

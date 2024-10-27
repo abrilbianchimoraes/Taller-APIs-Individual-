@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a87777a9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;  /* Cambia esto a flex para usar flexbox */
+    flex-direction: column;  /* Apila los elementos verticalmente */
+    align-items: center;  /* Centra los elementos horizontalmente */
+}
+
+h1 {
+    color: #333;
+}
+
+img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f575d980;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #f77bc7;
+}
